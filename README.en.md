@@ -2,7 +2,7 @@
 
 [Türkçe](README.md) · **English**
 
-Appointment, package, payment and WhatsApp management for beauty centers that sell multi-session packages, and for music schools. One flow from a WhatsApp inquiry to a documented package sale, payment collection, capacity-aware session planning and renewal.
+Appointment, package, payment and WhatsApp management for businesses that run on bookings, lessons and session packages: beauty centers, music schools, gyms and pilates studios, dietitians, counseling practices, kids' sports & art courses, language and tutoring centers. One flow from a WhatsApp inquiry to a documented package sale, payment collection, capacity-aware session planning and renewal.
 
 **Live:** [ajandala.com](https://ajandala.com) (Turkish market only)
 
@@ -22,7 +22,7 @@ Appointment, package, payment and WhatsApp management for beauty centers that se
 | Customer side | No app, no account: tokenized links for remaining sessions, offers, consent forms and bookings |
 | Admin panel | All tenants, time-boxed support mode with owner notification, audit log, mandatory MFA |
 
-The same codebase serves **music schools** (1:1 and group lessons, attendance, make-ups, monthly tuition, guardians, trial lessons). Sector-specific features are gated by plan features **in the database as well**, not just hidden in the UI.
+Each business type gets its own vocabulary and modules from the same codebase, e.g. **music schools** (1:1 and group lessons, attendance, make-ups, monthly tuition, guardians, trial lessons). Sector-specific features are gated by plan features **in the database as well**, not just hidden in the UI.
 
 ## Stack
 

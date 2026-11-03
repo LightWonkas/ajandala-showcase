@@ -2,7 +2,7 @@
 
 **Türkçe** · [English](README.en.md)
 
-Seanslı paket satan güzellik merkezleri ve müzik kursları için randevu, paket, tahsilat ve WhatsApp yönetimi. WhatsApp'tan gelen talebi belgeli paket satışına, tahsilata, kapasiteye göre seans planına ve paket bitiminde yenilemeye kadar tek akışta yönetir.
+Randevuyla, dersle ve paketle çalışan işletmeler için randevu, paket, tahsilat ve WhatsApp yönetimi: güzellik merkezleri, müzik kursları, spor ve pilates stüdyoları, diyetisyenler, danışmanlık merkezleri, çocuk spor ve sanat kursları, dil ve etüt merkezleri. WhatsApp'tan gelen talebi belgeli paket satışına, tahsilata, kapasiteye göre seans planına ve paket bitiminde yenilemeye kadar tek akışta yönetir.
 
 **Canlı:** [ajandala.com](https://ajandala.com)
 
@@ -24,11 +24,11 @@ Seanslı paket satan güzellik merkezleri ve müzik kursları için randevu, pak
 | Müşteri tarafı | Uygulama ya da hesap yok: "kalan seanslarım", teklif, onam formu ve randevu sayfaları token'lı linklerle |
 | Yönetim paneli | Tüm salonlar, destek modu (süreli, gerekçeli, salon sahibine bildirimli), denetim kaydı, zorunlu MFA |
 
-### İki sektör, tek kod
+### Farklı sektörler, tek kod
 
 ![Müzik kursları](assets/muzik-kursu.png)
 
-Aynı ürün müzik kurslarına da açılır: birebir ve grup dersleri, yoklama, telafi, aylık aidat, veli iletişimi ve deneme dersi sayfası. Sektöre özgü bölümler plan özellikleriyle açılır ve **veritabanında da kapılıdır**; yalnız ekranı gizlemekle yetinilmez. Sektöre göre değişen terimler (müşteri → öğrenci, seans → ders …) tek bir sözlükten gelir.
+Her işletme türü kendi terimleri ve bölümleriyle açılır. Örneğin müzik kursunda: birebir ve grup dersleri, yoklama, telafi, aylık aidat, veli iletişimi ve deneme dersi sayfası. Sektöre özgü bölümler plan özellikleriyle açılır ve **veritabanında da kapılıdır**; yalnız ekranı gizlemekle yetinilmez. Sektöre göre değişen terimler (müşteri → öğrenci, seans → ders …) tek bir sözlükten gelir.
 
 ### Nasıl çalışır
 
