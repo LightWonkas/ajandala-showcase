@@ -2,15 +2,17 @@
 
 [Türkçe](README.md) · **English**
 
-Appointment, package, payment and WhatsApp management for businesses that run on bookings, lessons and session packages: beauty centers, music schools, gyms and pilates studios, dietitians, counseling practices, kids' sports & art courses, language and tutoring centers. One flow from a WhatsApp inquiry to a documented package sale, payment collection, capacity-aware session planning and renewal.
+Appointment, package, payment and WhatsApp management for businesses that run on bookings, lessons and session packages. It serves **beauty centers** and **music schools** today; the same foundation is built to open up to other sectors. One flow from a WhatsApp inquiry to a documented package sale, payment collection, capacity-aware session planning and renewal.
 
 **Live:** [ajandala.com](https://ajandala.com) (Turkish market only)
 
 ![Ajandala home page](assets/hero.png)
 
-> **Status:** Free pilot in Istanbul. The application source is private; this repository only presents the product and its architecture.
+> **Status:** Free pilot in Istanbul, running live with demo data. WhatsApp sending, the AI assistant and online payments go live together with the pilot salons. The application source is private; this repository only presents the product and its architecture.
 
 ## What it does
+
+![Features](assets/ozellikler.png)
 
 | Area | Capability |
 |---|---|
@@ -20,9 +22,25 @@ Appointment, package, payment and WhatsApp management for businesses that run on
 | WhatsApp | Reminders from the salon's own number, confirm/cancel links, shared inbox, opt-in-aware campaigns |
 | AI assistant | WhatsApp assistant that reads prices and free slots only through tools and hands off medical questions, complaints and discounts to a human |
 | Customer side | No app, no account: tokenized links for remaining sessions, offers, consent forms and bookings |
-| Admin panel | All tenants, time-boxed support mode with owner notification, audit log, mandatory MFA |
+| Admin panel | Internal founder panel: all tenants, time-boxed support mode with owner notification, audit log, mandatory MFA |
+
+![Music schools](assets/muzik-kursu.png)
 
 Each business type gets its own vocabulary and modules from the same codebase, e.g. **music schools** (1:1 and group lessons, attendance, make-ups, monthly tuition, guardians, trial lessons). Sector-specific features are gated by plan features **in the database as well**, not just hidden in the UI.
+
+### How it works
+
+![How it works](assets/nasil-calisir.png)
+
+## Plans
+
+| | Starter | Growth | Pro |
+|---|---|---|---|
+| Monthly (excl. VAT) | 990 ₺ | 1,500 ₺ | 2,500 ₺ |
+| Staff / branches | 3 / 1 | 8 / 1 | 20 / 3 |
+| AI assistant | — | 300 conversations / mo | 800 conversations / mo |
+
+Limits are not hard-coded; they are read from a table keyed by `(sector, plan)`.
 
 ## Stack
 
@@ -46,8 +64,8 @@ Each business type gets its own vocabulary and modules from the same codebase, e
 
 | Metric | Value |
 |---|---|
-| Database migrations | 55 |
-| pgTAP SQL test files | 45 |
-| Unit test files | 106 |
+| Database migrations | 56 |
+| pgTAP SQL test files | 46 |
+| Unit test files | 107 |
 | Playwright e2e specs | 43 |
 | Pages & routes | 145 |

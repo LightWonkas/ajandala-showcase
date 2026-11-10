@@ -2,13 +2,13 @@
 
 **Türkçe** · [English](README.en.md)
 
-Randevuyla, dersle ve paketle çalışan işletmeler için randevu, paket, tahsilat ve WhatsApp yönetimi: güzellik merkezleri, müzik kursları, spor ve pilates stüdyoları, diyetisyenler, danışmanlık merkezleri, çocuk spor ve sanat kursları, dil ve etüt merkezleri. WhatsApp'tan gelen talebi belgeli paket satışına, tahsilata, kapasiteye göre seans planına ve paket bitiminde yenilemeye kadar tek akışta yönetir.
+Randevuyla, dersle ve paketle çalışan işletmeler için randevu, paket, tahsilat ve WhatsApp yönetimi. Bugün **güzellik merkezleri** ve **müzik kursları** için çalışır; aynı altyapı başka sektörlere açılacak şekilde kuruldu. WhatsApp'tan gelen talebi belgeli paket satışına, tahsilata, kapasiteye göre seans planına ve paket bitiminde yenilemeye kadar tek akışta yönetir.
 
 **Canlı:** [ajandala.com](https://ajandala.com)
 
 ![Ajandala ana sayfa](assets/hero.png)
 
-> **Durum:** İstanbul'da ücretsiz pilot aşamasında. Uygulama kaynak kodu özel depodadır; bu depo yalnızca ürünü ve mimarisini tanıtır.
+> **Durum:** İstanbul'da ücretsiz pilot aşamasında; canlı ortamda demo verisiyle çalışıyor. WhatsApp gönderimi, AI asistan ve online ödeme pilot salonlarla birlikte açılacak. Uygulama kaynak kodu özel depodadır; bu depo yalnızca ürünü ve mimarisini tanıtır.
 
 ## Ne yapar
 
@@ -22,13 +22,13 @@ Randevuyla, dersle ve paketle çalışan işletmeler için randevu, paket, tahsi
 | WhatsApp | Salonun kendi numarasından hatırlatma, onay/iptal linki, ortak gelen kutusu, toplu kampanya (İYS onayına göre) |
 | AI asistan | Fiyat ve uygun saatleri yalnız araçlardan okuyup randevu öneren, tıbbi soru/şikâyet/indirimde insana devreden WhatsApp asistanı |
 | Müşteri tarafı | Uygulama ya da hesap yok: "kalan seanslarım", teklif, onam formu ve randevu sayfaları token'lı linklerle |
-| Yönetim paneli | Tüm salonlar, destek modu (süreli, gerekçeli, salon sahibine bildirimli), denetim kaydı, zorunlu MFA |
+| Yönetim paneli | Kurucu için iç panel: tüm salonlar, destek modu (süreli, gerekçeli, salon sahibine bildirimli), denetim kaydı, zorunlu MFA |
 
 ### Farklı sektörler, tek kod
 
 ![Müzik kursları](assets/muzik-kursu.png)
 
-Her işletme türü kendi terimleri ve bölümleriyle açılır. Örneğin müzik kursunda: birebir ve grup dersleri, yoklama, telafi, aylık aidat, veli iletişimi ve deneme dersi sayfası. Sektöre özgü bölümler plan özellikleriyle açılır ve **veritabanında da kapılıdır**; yalnız ekranı gizlemekle yetinilmez. Sektöre göre değişen terimler (müşteri → öğrenci, seans → ders …) tek bir sözlükten gelir.
+Her işletme kendi sektörünün terimleri ve bölümleriyle açılır. Örneğin müzik kursunda: birebir ve grup dersleri, yoklama, telafi, aylık aidat, veli iletişimi ve deneme dersi sayfası. Sektöre özgü bölümler plan özellikleriyle açılır ve **veritabanında da kapılıdır**; yalnız ekranı gizlemekle yetinilmez. Sektöre göre değişen terimler (müşteri → öğrenci, seans → ders …) tek bir sözlükten gelir.
 
 ### Nasıl çalışır
 
@@ -64,7 +64,7 @@ flowchart LR
   subgraph N["Next.js 16"]
     S[ajandala.com<br/>site + müşteri linkleri]
     P[app.ajandala.com<br/>salon paneli]
-    A[admin.ajandala.com<br/>MFA · denetim kaydı]
+    A[yönetim paneli<br/>MFA · denetim kaydı]
   end
   WA[WhatsApp Cloud API] -->|imzalı webhook| P
   P --> AI[Claude asistanı<br/>yalnız tanımlı araçlar]
@@ -89,9 +89,9 @@ flowchart LR
 
 | Metrik | Değer |
 |---|---|
-| Veritabanı migration'ı | 55 |
-| pgTAP SQL test dosyası | 45 |
-| Birim test dosyası | 106 |
+| Veritabanı migration'ı | 56 |
+| pgTAP SQL test dosyası | 46 |
+| Birim test dosyası | 107 |
 | Playwright uçtan uca test | 43 |
 | AI senaryo seti | güzellik + müzik |
 | Sayfa ve route | 145 |
